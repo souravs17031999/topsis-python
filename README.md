@@ -27,7 +27,8 @@ Rank the alternatives according to final performance scores.
 
 ### Getting started Locally :  
 > Run On Terminal       
-```python topsis.py topsis.csv <weights> <impacts>```    
+```python topsis.py <filename.csv> <weights> <impacts>```   
+  ex. python topsis.py topsis.csv 0.25,0.25,0.25,0.25 -,+,+,+     
   
 > Run In IDLE   
 ```import topsis```      
