@@ -38,3 +38,5 @@ Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.
 
 ### OUTPUT :
 Prints out the best model / alternative.
+
+![output result](/images/t.JPG)
