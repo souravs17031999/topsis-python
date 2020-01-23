@@ -25,5 +25,8 @@ Calculate the similarity to the worst condition.
 ### STEP 7 : 
 Rank the alternatives according to final performance scores.   
 
+### Getting started Locally :  
+> Run On Terminal 
+> Run In IDLE 
 ### PAPER : 
 Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.5077.pdf).
