@@ -32,7 +32,10 @@ Rank the alternatives according to final performance scores.
   
 > Run In IDLE   
 ```from topsis import topsis```      
-```topsis.topsis('filepath', [list of weights], [list of impacts])```         
+```t = topsis.topsis('filepath', [list of weights], [list of impacts])```    
+```t.topsis_main()```        
+```t.display()```     
+
 ### PAPER : 
 Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.5077.pdf).
 
