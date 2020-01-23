@@ -35,3 +35,6 @@ Rank the alternatives according to final performance scores.
 ```topsis.topsis('filepath', [list of weights], [list of impacts])```         
 ### PAPER : 
 Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.5077.pdf).
+
+### OUTPUT :
+Prints out the best model / alternative.
