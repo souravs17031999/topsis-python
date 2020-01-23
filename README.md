@@ -31,7 +31,7 @@ Rank the alternatives according to final performance scores.
   ex. python topsis.py topsis.csv 0.25,0.25,0.25,0.25 -,+,+,+     
   
 > Run In IDLE   
-```import topsis```      
+```from topsis import topsis```      
 ```topsis.topsis('filepath', [list of weights], [list of impacts])```         
 ### PAPER : 
 Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.5077.pdf).
