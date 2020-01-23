@@ -26,4 +26,4 @@ Calculate the similarity to the worst condition.
 Rank the alternatives according to final performance scores.   
 
 ### PAPER : 
-Find the research paper at (arxiv)[https://arxiv.org/ftp/arxiv/papers/1412/1412.5077.pdf]
+Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.5077.pdf).
