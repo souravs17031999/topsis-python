@@ -29,6 +29,8 @@ Rank the alternatives according to final performance scores.
 > Run On Terminal       
 ```python topsis.py topsis.csv <weights> <impacts>```    
   
-> Run In IDLE      
+> Run In IDLE   
+```import topsis```      
+```topsis.topsis('filepath', [list of weights], [list of impacts])```         
 ### PAPER : 
 Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.5077.pdf).
