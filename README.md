@@ -34,8 +34,10 @@ Rank the alternatives according to final performance scores.
 ```from topsis import topsis```      
 ```t = topsis.topsis('filepath', [list of weights], [list of impacts])```    
 ```t.topsis_main()```        
-```t.display()```     
+```t.display()```       
 
+* ```topsis_main()``` has been specifically designed to inhibit leakeage of inbuilt functions.  
+* ```display()``` has been designed to debug to display all the intermediate matrices.      
 ### PAPER : 
 Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.5077.pdf).
 
