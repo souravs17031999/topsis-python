@@ -85,24 +85,34 @@ class topsis:
         print(f"Result : Model/Alternative {np.argsort(self.p_scores)[-1] + 1} is best")
 
     # displaying all the intermediate matrices calculations
+    # displaying all the intermediate matrices calculations
     def display(self):
+        print('Original Matrix :')
         print(self.matrix)
+        print('Nomralized Matrix : ')
         print(self.n_matrix)
+        print('Weighted Matrix : ')
         print(self.w_matrix)
+        print('Best values : ')
         print(self.best)
+        print('Worst Values : ')
         print(self.worst)
+        print('S_best Values : ')
         print(self.s_best)
+        print('S_worst Values : ')
         print(self.s_worst)
+        print('Performace Scores : ')
         print(self.p_scores)
 
     # main topsis functions caller to execute all the steps of the algorithm
-    def topsis_main(self):
+    def topsis_main(self, debug = False):
         self.normalized_matrix()
         self.weighted_matrix()
         self.ideal_calculate()
         print()
         self.rank_calculate()
-
+        if debug:
+            self.display()
 # main driver function
 if __name__ == '__main__':
     print('WELCOME TO TOPSIS RANKING ALGORITHM')
@@ -119,7 +129,7 @@ if __name__ == '__main__':
         if len(sys.argv) == 5:
             print()
             print('DISPLAYING ALL INNER MATRICES FOR MORE INFORMATION:')
-            t.display()
+            t.display(debug = True)
     else:
         print("PUT ARGUMENTS IN ORDER : python topsis.py <InputDataFile> <Weights> <Impacts> <Verbose>")
 
