@@ -35,7 +35,16 @@ Rank the alternatives according to final performance scores.
 > Run In IDLE   
 ```from topsis import topsis```      
 ```t = topsis.topsis('filepath', [list of weights], [list of impacts])```    
-```t.topsis_main()```        
+```t.topsis_main()```  
+
+> Run on Jupyter   
+Open terminal (cmd)   
+```jupyter notebook```   
+Create a new python3 file.     
+If file <filename.csv> doesn't exists, then make sure to upload the file to jupyter env.    
+```from topsis import topsis```      
+```t = topsis.topsis('filepath', [list of weights], [list of impacts])```    
+```t.topsis_main()``` 
 
 * ```topsis_main()``` has been specifically designed to inhibit leakeage of inbuilt functions.  
 * ```topsis_main(debug=True)``` use this to display all the intermediate matrices.   
