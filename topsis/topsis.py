@@ -87,6 +87,7 @@ class topsis:
     # displaying all the intermediate matrices calculations
     # displaying all the intermediate matrices calculations
     def display(self):
+        print('DISPLAYING ALL INNER MATRICES FOR MORE INFORMATION:')
         print('Original Matrix :')
         print(self.matrix)
         print('Nomralized Matrix : ')
@@ -128,8 +129,7 @@ if __name__ == '__main__':
         t.topsis_main()
         if len(sys.argv) == 5:
             print()
-            print('DISPLAYING ALL INNER MATRICES FOR MORE INFORMATION:')
-            t.display(debug = True)
+            t.topsis_main(debug = True)
     else:
         print("PUT ARGUMENTS IN ORDER : python topsis.py <InputDataFile> <Weights> <Impacts> <Verbose>")
 
