@@ -36,7 +36,8 @@ Rank the alternatives according to final performance scores.
 ```t.topsis_main()```        
 
 * ```topsis_main()``` has been specifically designed to inhibit leakeage of inbuilt functions.  
-* ```topsis_main(debug=True)``` use this to display all the intermediate matrices.      
+* ```topsis_main(debug=True)``` use this to display all the intermediate matrices.   
+* Make sure that ```filename.csv``` is in same directory where package is installed.
 ### PAPER : 
 Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.5077.pdf).
 
