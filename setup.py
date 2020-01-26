@@ -5,16 +5,19 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="topsis-python-souravdlboy",
-    version="0.0.1",
+    version="2.3.1",
     author="sourav kumar",
     author_email="sauravkumarsct@gmail.com",
-    description="Python package for TOPSIS algorithm",
+    description="Python package for Ranking ML models using TOPSIS algorithmic approach",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/souravs17031999/topsis-python",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.2",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
