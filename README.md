@@ -48,3 +48,5 @@ Prints out the best model / alternative.
 
 ![output result on jupyter](/images/t.JPG)
 ![output result on idle](/images/t1.JPG)
+![output result on cmd](/images/t2.JPG)
+
