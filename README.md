@@ -46,4 +46,5 @@ Find the research paper at [arxiv](https://arxiv.org/ftp/arxiv/papers/1412/1412.
 ### OUTPUT :
 Prints out the best model / alternative.
 
-![output result](/images/t.JPG)
+![output result on jupyter](/images/t.JPG)
+![output result on idle](/images/t1.JPG)
