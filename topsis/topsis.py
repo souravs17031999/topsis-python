@@ -113,6 +113,7 @@ class topsis:
         print()
         self.rank_calculate()
         if debug:
+            print()
             self.display()
 # main driver function
 if __name__ == '__main__':
@@ -126,10 +127,11 @@ if __name__ == '__main__':
         print(f"Given weights : {weights}")
         print(f"Given impacts : {impacts}")
         t = topsis(file, weights, impacts)
-        t.topsis_main()
         if len(sys.argv) == 5:
             print()
             t.topsis_main(debug = True)
+        else:
+            t.topsis_main()
     else:
         print("PUT ARGUMENTS IN ORDER : python topsis.py <InputDataFile> <Weights> <Impacts> <Verbose>")
 
