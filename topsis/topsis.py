@@ -82,9 +82,15 @@ class topsis:
             self.s_best[i] = np.sum((self.w_matrix[i, :] - self.best)**2)**0.5
             self.s_worst[i] = np.sum((self.w_matrix[i, :] - self.worst)**2)**0.5
         self.p_scores = self.s_worst/(self.s_best + self.s_worst)
+        final_scores_sorted = np.argsort(self.p_scores) # this returns indices of elements in sorted order
+        max_index = len(final_scores_sorted)
+        # printing final results
+        print("Models   Rank")
+        for i in range(len(final_scores_sorted)):
+            print(f"M{i + 1}      {max_index - np.where(final_scores_sorted==i)[0]}") # since we know final_scores_sorted is already sorted, so
+            # it i need ranking from back side, so we need to subtract from maximum and get first value of tuple returned by np.where function
         print(f"Result : Model/Alternative {np.argsort(self.p_scores)[-1] + 1} is best")
 
-    # displaying all the intermediate matrices calculations
     # displaying all the intermediate matrices calculations
     def display(self):
         print('DISPLAYING ALL INNER MATRICES FOR MORE INFORMATION:')
