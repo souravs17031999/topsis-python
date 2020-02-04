@@ -139,7 +139,7 @@ if __name__ == '__main__':
         else:
             t.topsis_main()
     else:
-        print("PUT ARGUMENTS IN ORDER : python topsis.py <InputDataFile> <Weights> <Impacts> <Verbose>")
+        print("PUT ARGUMENTS IN ORDER : python -m topsis.topsis <InputDataFile> <Weights> <Impacts> <Verbose>")
 
     # if want to use argparser constraining on some flags
     # parser = argparse.ArgumentParser(description='Topsis algorithm')
