@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="topsis-python-souravdlboy",
-    version="2.3.1",
+    version="2.5",
     author="sourav kumar",
     author_email="sauravkumarsct@gmail.com",
     description="Python package for Ranking ML models using TOPSIS algorithmic approach",
