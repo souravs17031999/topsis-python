@@ -4,6 +4,7 @@
 """
 import numpy as np
 import pandas as pd
+import re
 import sys
 # Class for topsis algorithm module
 class topsis:
@@ -28,9 +29,16 @@ class topsis:
         Args:
             file : Name of csv file to be read
             weights : list of weights for each attribute
-            impacts : list of true or false values whether impact is to be maximized or mnimized
+            impacts : list of true or false values whether impact is to be maximized or minimized
         """
-        self.matrix = np.array(pd.read_csv(file).iloc[:, 1:], dtype = np.float64)
+        # check for proper csv file
+        assert "csv" in f"{file}", "Could not recognize csv file, try checking your input file"
+        df = pd.read_csv(file).iloc[:, 1:]
+        # DATA PREPROCESSING
+        # using regular expressions to extract only numeric values along with floating values
+        for i in df:
+            df[i] = [re.findall("[0-9]*\.[0-9]+|[0-9]+", str(x))[0] for x in df[i]]
+        self.matrix = np.array(df, dtype = np.float64)
         # check for correct format of matrix
         assert len(self.matrix.shape) == 2, "Decision matrix a must be 2D"
 
@@ -124,7 +132,7 @@ class topsis:
 # main driver function
 if __name__ == '__main__':
     print('WELCOME TO TOPSIS RANKING ALGORITHM')
-    print('WE EXPECT ARGUMENTS TO BE IN ORDER : python topsis.py <InputDataFile> <Weights> <Impacts> <Verbose>')
+    print('EXPECTED ARGUMENTS TO BE IN ORDER : python -m topsis.topsis <InputDataFile> <Weights> <Impacts> <Verbose(optional)>')
     if len(sys.argv) >= 4:
         file = sys.argv[1]
         weights = list(map(float, sys.argv[2].strip().split(',')))
@@ -139,7 +147,7 @@ if __name__ == '__main__':
         else:
             t.topsis_main()
     else:
-        print("PUT ARGUMENTS IN ORDER : python -m topsis.topsis <InputDataFile> <Weights> <Impacts> <Verbose>")
+        print("PUT ARGUMENTS IN ORDER : python -m topsis.topsis <InputDataFile> <Weights> <Impacts> <Verbose>(optional)>")
 
     # if want to use argparser constraining on some flags
     # parser = argparse.ArgumentParser(description='Topsis algorithm')
