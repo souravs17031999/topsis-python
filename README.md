@@ -7,8 +7,8 @@ This is a part of project - I made for UCS633 - Data analytics and visualization
 @Roll no. : 101883068    
 # Algorithm :    
 ### STEP 1 :    
-Create an evaluation matrix consisting of m alternatives and n criteria, with the intersection of each alternative and criteria.
-
+Create an evaluation matrix consisting of m alternatives and n criteria, with the intersection of each alternative and criteria.   
+Apply any preprocessing if required.   
 ### STEP 2 :   
 The matrix is then normalised using the norm.
 
