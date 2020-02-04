@@ -33,12 +33,13 @@ class topsis:
         """
         # check for proper csv file
         assert "csv" in f"{file}", "Could not recognize csv file, try checking your input file"
-        df = pd.read_csv(file).iloc[:, 1:]
+        self.df = pd.read_csv(file).iloc[:, 1:]
+        self.df_copy_id = pd.read_csv(file).iloc[:, 0]
         # DATA PREPROCESSING
         # using regular expressions to extract only numeric values along with floating values
-        for i in df:
-            df[i] = [re.findall("[0-9]*\.[0-9]+|[0-9]+", str(x))[0] for x in df[i]]
-        self.matrix = np.array(df, dtype = np.float64)
+        for i in self.df:
+            self.df[i] = [re.findall("[0-9]*\.[0-9]+|[0-9]+", str(x))[0] for x in self.df[i]]
+        self.matrix = np.array(self.df, dtype = np.float64)
         # check for correct format of matrix
         assert len(self.matrix.shape) == 2, "Decision matrix a must be 2D"
 
@@ -92,11 +93,11 @@ class topsis:
         self.p_scores = self.s_worst/(self.s_best + self.s_worst)
         final_scores_sorted = np.argsort(self.p_scores) # this returns indices of elements in sorted order
         max_index = len(final_scores_sorted)
-        # printing final results
-        print("Models   Rank")
+        rank = []
         for i in range(len(final_scores_sorted)):
-            print(f"M{i + 1}      {max_index - np.where(final_scores_sorted==i)[0]}") # since we know final_scores_sorted is already sorted, so
+            rank.append(max_index - np.where(final_scores_sorted==i)[0][0])# since we know final_scores_sorted is already sorted, so
             # it i need ranking from back side, so we need to subtract from maximum and get first value of tuple returned by np.where function
+        print(pd.DataFrame({"Models/id" : self.df_copy_id, "Ranks": np.array(rank)}))
         print(f"Result : Model/Alternative {np.argsort(self.p_scores)[-1] + 1} is best")
 
     # displaying all the intermediate matrices calculations
