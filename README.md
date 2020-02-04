@@ -57,4 +57,7 @@ Prints out overall ml models ranked and the best model / alternative.
 
 ![output result on jupyter](/images/t.JPG)
 ![output result on idle](/images/t1.JPG)
-![output result on cmd](/images/t2.JPG)
+![output result on cmd](/images/t2.JPG)   
+
+# TESTING : 
+* The package has been extensively tested on various datasets consisting varied types of expected and unexpected input data and any preprocessing , if required has been taken cared of.
